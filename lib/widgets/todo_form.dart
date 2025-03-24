@@ -101,50 +101,46 @@ class TodoForm extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 8),
-              Obx(
-                () => Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                      color: colorScheme.outline.withAlpha(128),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: colorScheme.outline.withAlpha(128)),
+                ),
+                child: Column(
+                  children: [
+                    _buildStatusRadioOption(
+                      context,
+                      controller,
+                      'ready',
+                      Colors.blue,
+                      Icons.play_arrow_rounded,
+                      'Ready to start',
                     ),
-                  ),
-                  child: Column(
-                    children: [
-                      _buildStatusRadioOption(
-                        context,
-                        controller,
-                        'ready',
-                        Colors.blue,
-                        Icons.play_arrow_rounded,
-                        'Ready to start',
-                      ),
-                      Divider(
-                        height: 1,
-                        color: colorScheme.outline.withAlpha(51),
-                      ),
-                      _buildStatusRadioOption(
-                        context,
-                        controller,
-                        'pending',
-                        Colors.orange,
-                        Icons.hourglass_empty,
-                        'In progress',
-                      ),
-                      Divider(
-                        height: 1,
-                        color: colorScheme.outline.withAlpha(51),
-                      ),
-                      _buildStatusRadioOption(
-                        context,
-                        controller,
-                        'completed',
-                        Colors.green,
-                        Icons.check_circle_outline,
-                        'Completed',
-                      ),
-                    ],
-                  ),
+                    Divider(
+                      height: 1,
+                      color: colorScheme.outline.withAlpha(51),
+                    ),
+                    _buildStatusRadioOption(
+                      context,
+                      controller,
+                      'pending',
+                      Colors.orange,
+                      Icons.hourglass_empty,
+                      'In progress',
+                    ),
+                    Divider(
+                      height: 1,
+                      color: colorScheme.outline.withAlpha(51),
+                    ),
+                    _buildStatusRadioOption(
+                      context,
+                      controller,
+                      'completed',
+                      Colors.green,
+                      Icons.check_circle_outline,
+                      'Completed',
+                    ),
+                  ],
                 ),
               ),
             ],

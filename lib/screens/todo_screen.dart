@@ -157,29 +157,18 @@ class TodoScreen extends StatelessWidget {
 
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
-          child: AnimatedList(
-            initialItemCount: todoController.todos.length,
-            itemBuilder: (context, index, animation) {
+          child: ListView.builder(
+            itemCount: todoController.todos.length,
+            itemBuilder: (context, index) {
               final todo = todoController.todos[index];
-              return SlideTransition(
-                position: Tween<Offset>(
-                  begin: const Offset(1, 0),
-                  end: Offset.zero,
-                ).animate(
-                  CurvedAnimation(
-                    parent: animation,
-                    curve: Curves.easeOutQuint,
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: TodoItem(
-                    todo: todo,
-                    onDelete: () => todoController.deleteTodo(todo.id),
-                    onStatusChange:
-                        (newStatus) =>
-                            todoController.updateTodoStatus(todo.id, newStatus),
-                  ),
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4),
+                child: TodoItem(
+                  todo: todo,
+                  onDelete: () => todoController.deleteTodo(todo.id),
+                  onStatusChange:
+                      (newStatus) =>
+                          todoController.updateTodoStatus(todo.id, newStatus),
                 ),
               );
             },
