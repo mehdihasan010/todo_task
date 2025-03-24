@@ -10,6 +10,15 @@ A Flutter-based Todo application that allows users to manage their tasks efficie
 - **Status Management**: Track todo status as 'ready', 'pending', or 'completed'
 - **State Management**: Uses GetX for efficient state management
 
+## Screenshots
+
+Here are some screenshots of the Todo App in action:
+
+![Todo List Screen](WhatsApp%20Image%202025-03-25%20at%2000.50.21.jpeg)
+![Add Todo Screen](WhatsApp%20Image%202025-03-25%20at%2000.50.21%20(1).jpeg)
+![Todo Details](WhatsApp%20Image%202025-03-25%20at%2000.50.21%20(2).jpeg)
+![Import/Export Options](WhatsApp%20Image%202025-03-25%20at%2000.50.22.jpeg)
+
 ## Architecture
 
 The app follows a clean architecture approach with the following structure:
