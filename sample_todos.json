@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "title": "Buy groceries",
+        "description": "Milk, eggs, bread, and vegetables",
+        "createdAt": 1711178400000,
+        "status": "pending"
+    },
+    {
+        "id": "2",
+        "title": "Complete Flutter assignment",
+        "description": "Finish the Todo app with CSV storage and JSON import",
+        "createdAt": 1711178500000,
+        "status": "completed"
+    },
+    {
+        "id": "3",
+        "title": "Schedule dentist appointment",
+        "description": "Call Dr. Smith's office for a checkup",
+        "createdAt": 1711178600000,
+        "status": "ready"
+    },
+    {
+        "id": "4",
+        "title": "Learn new Flutter widgets",
+        "description": "Study Material 3 components and animations",
+        "createdAt": 1711178700000,
+        "status": "pending"
+    }
+]
